@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+	content="width=device-width, initial-scale=1.0">
+	<title> 
+		GION Group
+	</title>
+	<link rel="stylesheet" href="./assets/css/style.css">
+
+
+</head>
+
+<body>
+	<nav> 
+		<a href="#home">Home</a>
+		<a href="#about">About US</a>
+		<a href="#service">Services</a>
+		<a href="#contact">Contact</a>
+	</nav>
+	<header>
+		<h1>Welcome to GION GROUP</h1>
+	</header>
+
+	<div class="container">
+		<section id="home">
+			<h2>Welcome to GION GROUP.</h2>
+			<p>Your destination for quality services.</p>
+			<div class="imgs">
+				<img src="./assets/images/laso6.jpg"/>
+			</div>
+
+		</section>
+
+		<section id="about">
+			<h2>About Us</h2>
+			<p>Discover our potentials, values, and commitment to achieving goals.</p>
+
+			<div>
+				<img src="./assets/images/laso6.jpg">
+
+				<img src="./assets/images/laso5.jpg">
+
+				<img src="./assets/images/laso4.jpg">
+
+				<img src="./assets/images/laso2.jpg">
+			</div>
+
+		</section>
+ 
+		<section id="services">
+			<h2>Services</h2>
+
+			<p>
+				We offer a range of services to carter to your needs.
+			</p>
+
+			<ul>
+				<li> Oil and Gas </li>
+				<li> Haulage </li>
+				<li> Photography </li>
+			</ul>
+		</section>
+
+		<section id="contact">
+			<h2>Contact Us</h2>
+
+			<p>
+				Do you have any questions? Do well to reach out to us.
+			</p>
+
+			<form>
+				<label for="name">
+					Gion Group
+				</label>
+
+				<input type="text"id="name" name="name">
+
+				<label for="email">
+				Chukwuebukachukwu792@gmail.com
+			</label>
+
+			<input type="text"id="name" name="email">
+
+		<div>
+			<button type="submit">
+				Submit
+			</button>
+		</form>
+	</section>
+		</div>
+
+				<section id="services">
+			<h2>Services</h2>
+
+			<p>
+				We offer a range of services to carter to your needs.
+			</p>
+
+			<ul>
+				<li> Oil and Gas </li>
+				<li> Haulage </li>
+				<li> Photography </li>
+			</ul>
+		</section>
+
+		<section id="contact">
+			<h2>Contact Us</h2>
+
+			<p>
+				Do you have any questions? Do well to reach out to us.
+			</p>
+
+			<form>
+				<label for="name">
+					Gion Group
+				</label>
+
+				<input type="text"id="name" name="name">
+
+				<label type="email">
+				Chukwuebukachukwu792@gmail.com
+			</label>
+
+			<input type="text"id="name" name="email">
+
+		<div>
+			<button type="submit">submit</button>
+		</form>
+	</section>
+				<footer>
+				<p>
+					&copy; 2023 GION GROUP. All rights reserved.
+				</p>
+			</footer>
+	<script>
+				const navLinks =document.querySelectAll('.nav-links a');
+
+				navLinks.forEach(link => {
+					link.addEventsListerner('click', e=> {
+						e.preventDefault();
+						const targetId = link.getAttribute('href');
+						const targetElement = document.querySelector(targetId);
+						if (targetElement) {
+							window.scrollTo({top:	0, behavior:"smooth"});
+						}
+					});
+				});
+				
+				const contactForm = document.querySelector('.contact-form');
+
+				const nameInput =
+				contactForm.querySelector('[type="text"]');
+
+				const emailInput =
+				contactForm.querySelector('[type="email"]');
+
+				const messageInput =
+				contactForm.addEventsListerner('submit', e=> {
+					e.preventDefault();
+					const nameValue =
+					nameInput.value.trim();
+					const emailValue =
+					emailInput.value.trim();
+					const messageValue =
+					messageInput.value.trim();
+
+					if (name.Value === '') {
+						alert('Please enter your email.');
+
+						nameInput.focus();
+					} else if (email.Value === '') {
+						alert('Please enter your email.');
+
+						emailInput.focus();
+					} else if (!isValidEmail(emailValue)) {
+						alert('Please enter a valid email address.');
+						emailInput.focus();
+					
+					} else if (messageValue ==='') {
+						alert('Please enter your message.');
+						messageInput.focus();
+					} else {
+						
+					}})
+
+				</script>
+		</body>
+</html>
